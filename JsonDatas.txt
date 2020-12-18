@@ -1,0 +1,75 @@
+User(Login):
+    {
+        dni :,
+        pass :,
+        email: //por si se olvidad la contraseña,
+    }
+
+Registro(Persona(Datos Personales)):
+    {
+       /* @Id: auto */
+        nombre:,
+        apellido:,
+        dni:,
+        email:,
+        direccion:,
+        obraSocial:,
+        numeroCarnetSocio:,
+    }
+
+Obrasocial:
+    {
+       /* @id: auto, */
+        nombre:,
+        razonsocial:,
+        direccion:,
+        telefono:,
+        nro:,
+        etc:
+    }    
+
+laboratorio:
+{
+    razonSocial:,
+    nombre:,
+
+}    
+
+Medicamento:
+{
+        laboratorio:,
+        numeroCertificado:,
+        nombreComercial:,
+        nombreGenerico:,
+        lote:,
+        vencimiento:,
+        concentracion:([]),
+        formaFamaceutica:,(List Opciones: blister, gotas, etc;)
+        presentacion:(cantidad de forma formaFamaceutica), (Pasarlo a unidades)
+        boolean separado:,
+}
+
+///Movientos Entre Depositos, y Entradas y salidas de medicamento.
+
+MovimientoMedicamento:
+{
+    medicamento:,
+    cantidad:
+}
+
+lote:
+{
+    @Id: auto
+    list<MoviemientosMedicamento>:,
+    vencimiento:,
+}
+
+Depositos:
+{
+    nombre:,
+    direccion:,
+    List<Lotes>:,
+    responsable:(Usuario)
+}
+
+
