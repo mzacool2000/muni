@@ -4,11 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
-
+/**/
 //Relevamiento Municipalidad de Mendoza
+
 //Sistema de control de stock de medicamentos, contemplando la 
 //interconexion entre el sistema del deposito central con todos 
 //los centros de salud del municipio.
+
 //El depósito central genera ingresos de medicamentos a partir de
 //compras o devoluciones de medicamentos. Este puede enviar medicamentos
 //a los centros de salud o bien enviarlos entre centros. 

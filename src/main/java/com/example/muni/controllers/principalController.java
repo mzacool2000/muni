@@ -21,5 +21,22 @@ public class principalController {
     public String principal(){
         return "paginaprincipal.html";
     }
+    @GetMapping("/user")
+    public String user(){
+        return "user.html";
+    }
+    @GetMapping("/tables")
+    public String tables(){
+        return "tables.html";
+    }
+    @GetMapping("/typography")
+    public String typography(){
+        return "typography.html";
+    }
+   
+    
+    
+    
+    
     
 }
