@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.controllers;
+package com.example.muni.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,12 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/")
-public class portalController {
+public class principalController {
     
-    @GetMapping("/")
-    public String index(){
-        return "index.html";
+    @GetMapping("/principal")
+    public String principal(){
+        return "paginaprincipal.html";
     }
-    
     
 }
