@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 /**
  *
  * @author chiri
- */
+ */       
 @Repository
 public interface PersonaRepository extends JpaRepository<Persona, String>{
     @Query("SELECT c FROM Persona c WHERE c.email = :email " )

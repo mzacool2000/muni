@@ -18,6 +18,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -25,9 +26,12 @@ import org.springframework.web.context.request.ServletRequestAttributes;
  *
  * @author chiri
  */
+@Service
 public class UsuarioService implements UserDetailsService {
-    
-@Autowired UsuarioRepository usuarioRepository;    
+
+//John: Arreglo orden de sintaxis    
+@Autowired 
+private UsuarioRepository usuarioRepository;    
 
 @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

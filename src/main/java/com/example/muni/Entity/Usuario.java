@@ -5,7 +5,10 @@
  */
 package com.example.muni.Entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -15,15 +18,18 @@ import org.hibernate.annotations.GenericGenerator;
  *
  * @author chiri
  */
-public class Usuario {
+//John: Agrego @Entity aca, e implements Serializable 
+@Entity
+public class Usuario implements Serializable {
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
     private String username;
     private String password;
+    //John: Agrego Lista de Permisos
     @OneToMany
-    private Permiso permiso;
+    private List<Permiso> permisos;
 
     /**
      * @return the id
@@ -67,20 +73,19 @@ public class Usuario {
         this.password = password;
     }
 
-  
 
     /**
-     * @return the permiso
+     * @return the permisos
      */
-    public Permiso getPermiso() {
-        return permiso;
+    public List<Permiso> getPermisos() {
+        return permisos;
     }
 
     /**
-     * @param permiso the permiso to set
+     * @param permisos the permisos to set
      */
-    public void setPermiso(Permiso permiso) {
-        this.permiso = permiso;
+    public void setPermisos(List<Permiso> permisos) {
+        this.permisos = permisos;
     }
     
 }

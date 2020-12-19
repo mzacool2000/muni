@@ -33,7 +33,7 @@ public class Persona {
     private Usuario usuario;
     
     
-
+    //John: Refactor a la clase 
 
 
     /**
@@ -118,6 +118,48 @@ public class Persona {
      */
     public void setHabilitado(Boolean habilitado) {
         this.habilitado = habilitado;
+    }
+
+    /**
+     * @return the obraSocial
+     */
+    public ObraSocial getObraSocial() {
+        return obraSocial;
+    }
+
+    /**
+     * @param obraSocial the obraSocial to set
+     */
+    public void setObraSocial(ObraSocial obraSocial) {
+        this.obraSocial = obraSocial;
+    }
+
+    /**
+     * @return the numeroSocio
+     */
+    public String getNumeroSocio() {
+        return numeroSocio;
+    }
+
+    /**
+     * @param numeroSocio the numeroSocio to set
+     */
+    public void setNumeroSocio(String numeroSocio) {
+        this.numeroSocio = numeroSocio;
+    }
+
+    /**
+     * @return the usuario
+     */
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    /**
+     * @param usuario the usuario to set
+     */
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
 

@@ -25,6 +25,36 @@ public class Permiso {
     private String id;
     @Enumerated(EnumType.STRING)
     private Rol rol;
+
+    //John: Refactor a la clase 
+    
+    /**
+     * @return the id
+     */
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    /**
+     * @return the rol
+     */
+    public Rol getRol() {
+        return rol;
+    }
+
+    /**
+     * @param rol the rol to set
+     */
+    public void setRol(Rol rol) {
+        this.rol = rol;
+    }
     
     
 }
